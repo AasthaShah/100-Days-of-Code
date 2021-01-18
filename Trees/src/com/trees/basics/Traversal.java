@@ -22,4 +22,28 @@ public class Traversal {
 		
 	}
 	
+	void preOrderTraversal(TreeNode root) {
+		while(root != null) {
+			System.out.println(root.data);
+			preOrderTraversal(root.left);
+			preOrderTraversal(root.right);
+		}
+	}
+	
+	void postOrderTraversal(TreeNode root) {
+		while(root != null) {
+			preOrderTraversal(root.left);
+			preOrderTraversal(root.right);
+			System.out.println(root.data);
+		}
+	}
+	
+	void inOrderTraversal(TreeNode root) {
+		while(root != null) {
+			preOrderTraversal(root.left);
+			System.out.println(root.data);
+			preOrderTraversal(root.right);
+		}
+	}
+	
 }
